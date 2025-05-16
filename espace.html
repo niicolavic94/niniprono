@@ -4,31 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espaces VIP - NiniProno</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Votre CSS personnalisé -->
     <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header >
+    <header>
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-3">
-                    <a href="#">
+                    <a href="index.html" aria-label="NiniProno Accueil">
                         <img src="logoNP.png" alt="NiniProno Logo" class="img-fluid">
                     </a>
                 </div>
                 <div class="col-md-9">
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <div class="container-fluid">
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarNav">
-                                <ul class="navbar-nav">
+                                <ul class="navbar-nav ms-auto">
                                     <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
                                     <li class="nav-item"><a class="nav-link" href="vip.html">Devenir VIP</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="espace.html">Espaces VIP</a></li>
+                                    <li class="nav-item"><a class="nav-link active" href="espace.html">Espaces VIP</a></li>
                                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                                     <li class="nav-item"><a class="nav-link" href="compte.html">Mon Compte</a></li>
                                 </ul>
@@ -39,44 +38,85 @@
             </div>
         </div>
     </header>
-    <main>
-        <section class="hero bg-royal-blue text-white text-center py-5">
+    <main class="container mt-4">
+        <section class="hero bg-royal-blue text-white text-center py-5 mb-4">
             <div class="container">
                 <h1>Espaces VIP</h1>
-                <p>Accédez à votre espace VIP pour voir les pronostics exclusifs</p>
+                <p>Accédez à vos pronostics exclusifs et à votre communauté VIP</p>
             </div>
         </section>
-        <section class="vip-offers py-5">
-            <div class="container">
-                <h2 class="text-center mb-4">Vos Pronostics</h2>
-                <!-- Ajoutez vos pronostics VIP ici -->
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">Match du Jour</h5>
-                                <p class="card-text">Pronostic pour le match du jour.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">Match de Demain</h5>
-                                <p class="card-text">Pronostic pour le match de demain.</p>
-                            </div>
+
+        <section class="vip-content py-5">
+            <h2 class="text-center mb-4">Vos Pronostics Exclusifs</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fa fa-futbol me-2"></i> Match du Jour</h5>
+                            <p class="card-text">Découvrez ici le pronostic exclusif pour le match le plus attendu d'aujourd'hui !</p>
+                            <p><strong>Pronostic :</strong> Équipe A gagne</p>
+                            <p><strong>Cote :</strong> 1.85</p>
+                            <p><small class="text-muted">Analyse détaillée disponible pour les membres VIP.</small></p>
                         </div>
                     </div>
                 </div>
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fa fa-calendar-alt me-2"></i> Match de Demain</h5>
+                            <p class="card-text">Ne manquez pas notre pronostic en avant-première pour un match clé de demain.</p>
+                            <p><strong>Pronostic :</strong> Plus de 2.5 buts</p>
+                            <p><strong>Cote :</strong> 2.10</p>
+                            <p><small class="text-muted">Informations complètes réservées aux abonnés VIP.</small></p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </section>
+
+        <section class="vip-telegram py-5 bg-light">
+            <div class="container text-center">
+                <h2 class="mb-4"><i class="fab fa-telegram me-2"></i> Rejoignez notre Canal Telegram VIP</h2>
+                <p class="lead">Restez informé en temps réel de nos derniers pronostics, analyses et offres exclusives en rejoignant notre canal Telegram VIP !</p>
+                <a href="https://t.me/VOTRE_LIEN_TELEGRAM_ICI" class="btn btn-primary btn-lg mt-3" target="_blank" rel="noopener noreferrer">
+                    Rejoindre le Canal Telegram VIP
+                </a>
+                <p class="mt-2"><small class="text-muted">Lien réservé aux membres VIP de NiniProno.</small></p>
             </div>
         </section>
     </main>
-    <footer class="bg-royal-blue text-white text-center py-3">
+    <footer class="bg-royal-blue text-white py-4">
         <div class="container">
-            <p>&copy; 2023 NiniProno. Tous droits réservés.</p>
+            <div class="row">
+                <div class="col-12 text-center mb-3">
+                    <p class="mb-1"><strong>Avertissement :</strong> Les jeux de hasard et d'argent sont interdits aux mineurs et peuvent entraîner une dépendance. Jouez de manière responsable.</p>
+                    <p class="mb-0">Pour toute aide, contactez le <a href="tel:0974751313" class="text-white">09 74 75 13 13</a> (appel non surtaxé).</p>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <ul class="list-unstyled">
+                        <li><a href="faq.html" class="text-white">FAQ</a></li>
+                        <li><a href="mentions.html" class="text-white">Mentions Légales</a></li>
+                        <li><a href="cgv.html" class="text-white">Conditions Générales de Vente</a></li>
+                        <li><a href="confidentialite.html" class="text-white">Politique de Confidentialité</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-center">
+                    <p class="mb-0">© 2025 NiniProno. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="social-icons">
+                        <a href="https://www.tiktok.com/@NiniProno" class="text-white me-3" target="_blank" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.instagram.com/niniprono" class="text-white" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

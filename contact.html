@@ -4,32 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - NiniProno</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Votre CSS personnalisé -->
     <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-3">
-                    <a href="#">
+                    <a href="index.html" aria-label="NiniProno Accueil">
                         <img src="logoNP.png" alt="NiniProno Logo" class="img-fluid">
                     </a>
                 </div>
                 <div class="col-md-9">
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <div class="container-fluid">
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarNav">
-                               <ul class="navbar-nav">
+                                <ul class="navbar-nav ms-auto">
                                     <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
                                     <li class="nav-item"><a class="nav-link" href="vip.html">Devenir VIP</a></li>
                                     <li class="nav-item"><a class="nav-link" href="espace.html">Espaces VIP</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
                                     <li class="nav-item"><a class="nav-link" href="compte.html">Mon Compte</a></li>
                                 </ul>
                             </div>
@@ -39,40 +38,120 @@
             </div>
         </div>
     </header>
-    <main>
-        <section class="hero bg-royal-blue text-white text-center py-5">
+    <main class="container mt-4">
+        <section class="hero bg-royal-blue text-white text-center py-5 mb-4">
             <div class="container">
                 <h1>Contactez-Nous</h1>
-                <p>Nous sommes là pour vous aider</p>
+                <p>Nous sommes là pour vous aider. Veuillez remplir le formulaire ci-dessous.</p>
             </div>
         </section>
-        <section class="contact py-5">
+        <section class="contact py-5" style="background-color: red; border-radius: 10px; margin-bottom: 40px; padding: 30px;">
             <div class="container">
-                <h2 class="text-center mb-4">Formulaire de Contact</h2>
-                <form>
+                <h2 class="text-center mb-4">Formulaire de Contact </h2>
+                <form id="contactForm" action="/traitement-contact" method="POST">
                     <div class="mb-3">
-                        <label for="name" class="form-label">Nom</label>
-                        <input type="text" class="form-control" id="name" required>
+                        <label for="name" class="form-label"><i class="fas fa-user me-2"></i> Nom</label>
+                        <input type="text" class="form-control" id="name" name="name" required pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]+" title="Veuillez entrer uniquement des lettres et des espaces.">
+                        <div class="invalid-feedback">Veuillez entrer votre nom.</div>
                     </div>
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" required>
+                        <label for="email" class="form-label"><i class="fas fa-envelope me-2"></i> Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" title="Veuillez entrer une adresse email valide.">
+                        <div class="invalid-feedback">Veuillez entrer une adresse email valide.</div>
                     </div>
                     <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" rows="3" required></textarea>
+                        <label for="subject" class="form-label"><i class="fas fa-tag me-2"></i> Sujet</label>
+                        <input type="text" class="form-control" id="subject" name="subject" required maxlength="100" title="Veuillez entrer le sujet de votre message (max. 100 caractères).">
+                        <div class="invalid-feedback">Veuillez entrer le sujet de votre message.</div>
                     </div>
-                    <button type="submit" class="btn btn-gold">Envoyer</button>
+                    <div class="mb-3">
+                        <label for="message" class="form-label"><i class="fas fa-comment-dots me-2"></i> Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required maxlength="500" title="Veuillez entrer votre message (max. 500 caractères)."></textarea>
+                        <div class="invalid-feedback">Veuillez entrer votre message.</div>
+                    </div>
+
+                    <div style="position:absolute; left:-9999px;">
+                        <label for="fax">Ne pas remplir :</label>
+                        <input type="text" id="fax" name="fax" value="">
+                    </div>
+
+                    <button type="submit" class="btn btn-gold"><i class="fas fa-paper-plane me-2"></i> Envoyer le Message</button>
+                    <div id="form-response" class="mt-3 text-success d-none">Votre message a été envoyé avec succès !</div>
+                    <div id="form-error" class="mt-3 text-danger d-none">Une erreur est survenue lors de l'envoi du message. Veuillez réessayer plus tard.</div>
                 </form>
             </div>
         </section>
     </main>
-    <footer class="bg-royal-blue text-white text-center py-3">
+    <footer class="bg-royal-blue text-white py-4">
         <div class="container">
-            <p>&copy; 2023 NiniProno. Tous droits réservés.</p>
+            <div class="row">
+                <div class="col-12 text-center mb-3">
+                    <p class="mb-1"><strong>Avertissement :</strong> Les jeux de hasard et d'argent sont interdits aux mineurs et peuvent entraîner une dépendance. Jouez de manière responsable.</p>
+                    <p class="mb-0">Pour toute aide, contactez le <a href="tel:0974751313" class="text-white">09 74 75 13 13</a> (appel non surtaxé).</p>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <ul class="list-unstyled">
+                        <li><a href="faq.html" class="text-white">FAQ</a></li>
+                        <li><a href="mentions.html" class="text-white">Mentions Légales</a></li>
+                        <li><a href="cgv.html" class="text-white">Conditions Générales de Vente</a></li>
+                        <li><a href="confidentialite.html" class="text-white">Politique de Confidentialité</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-center">
+                    <p class="mb-0">© 2025 NiniProno. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="social-icons">
+                        <a href="https://www.tiktok.com/@NiniProno" class="text-white me-3" target="_blank" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.instagram.com/niniprono" class="text-white" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Activation des fonctionnalités de validation Bootstrap
+        (function () {
+            'use strict'
+
+            const forms = document.querySelectorAll('#contactForm')
+            const responseMessage = document.getElementById('form-response');
+
+            Array.from(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+
+                        // Simulation d'envoi réussi (à remplacer par votre logique AJAX réelle)
+                        if (form.checkValidity()) {
+                            event.preventDefault(); // Empêcher la soumission réelle pour la simulation
+                            responseMessage.classList.remove('d-none');
+                            form.reset();
+                            form.classList.remove('was-validated');
+                            setTimeout(() => {
+                                responseMessage.classList.add('d-none');
+                            }, 3000);
+                            // Ici, vous devrez implémenter votre appel AJAX pour envoyer
+                            // les données du formulaire à votre serveur.
+                            // En cas de succès côté serveur, vous laisserez
+                            // responseMessage.classList.remove('d-none');
+                            // En cas d'erreur, vous afficherez le message d'erreur.
+                            // document.getElementById('form-error').classList.remove('d-none');
+                        }
+                    }, false)
+                })
+        })()
+    </script>
 </body>
 </html>
