@@ -3,42 +3,47 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>NiniProno - Pronostics de Football</title>
-    <!-- Bootstrap CSS -->
+    <title>NiniProno - Pronostics Football Fiables et Conseils d'Experts</title>
+    <meta name="description" content="NiniProno: Pronostics de football précis, analyses d'experts, et offres VIP pour maximiser vos gains. Rejoignez notre communauté de parieurs passionnés !" />
+    <meta name="keywords" content="pronostics football, paris sportifs, football, expert pronostics, VIP, gains, analyses, cotes, matchs" />
+    <meta name="author" content="NiniProno" />
+    <link rel="canonical" href="https://www.niniprono.com/" /> <meta property="og:title" content="NiniProno - Pronostics Football Fiables et Conseils d'Experts" />
+    <meta property="og:description" content="NiniProno: Pronostics de football précis, analyses d'experts, et offres VIP pour maximiser vos gains." />
+    <meta property="og:image" content="URL_DE_VOTRE_LOGO" /> <meta property="og:url" content="https://www.niniprono.com/" /> <meta property="og:type" content="website" />
+
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-3">
-                    <a href="#">
-                        <img src="logoNP.png" alt="NiniProno Logo" class="img-fluid" />
+                    <a href="index.html" aria-label="NiniProno Accueil">
+                        <img src="logoNP.png" alt="Logo NiniProno" class="img-fluid" />
                     </a>
                 </div>
                 <div class="col-md-9">
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <div class="container-fluid">
                             <button
-                              class="navbar-toggler"
-                              type="button"
-                              data-bs-toggle="collapse"
-                              data-bs-target="#navbarNav"
-                              aria-controls="navbarNav"
-                              aria-expanded="false"
-                              aria-label="Toggle navigation"
+                                class="navbar-toggler"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#navbarNav"
+                                aria-controls="navbarNav"
+                                aria-expanded="false"
+                                aria-label="Toggle navigation"
                             >
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarNav">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="index.html">Accueil</a>
+                                <ul class="navbar-nav ms-auto"> <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="vip.html">Devenir VIP</a>
@@ -64,39 +69,51 @@
     <main>
         <section class="hero bg-royal-blue text-white text-center py-5">
             <div class="container">
-                <h1>Bienvenue sur NiniProno</h1>
-                <p>Expert en pronostics de football</p>
-                <button class="btn btn-gold btn-lg">DEVENIR VIP</button>
+                <h1>NiniProno : Vos Pronostics Football pour des Gains Assurés</h1>
+                <p class="lead">L'expertise au service de vos paris sportifs.</p>
+                <a href="vip.html" class="btn btn-gold btn-lg" aria-label="Devenir membre VIP">DEVENIR VIP</a>
             </div>
         </section>
 
-        <!-- Pronostics Publics centrés sous forme de cartes -->
         <section class="public-pronos py-5">
             <div class="container">
-                <h2 class="text-center mb-4">Pronostics Publics</h2>
+                <h2 class="text-center mb-4">Nos Pronostics Gratuits</h2>
                 <div class="row justify-content-center">
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <div class="card-header">Pronostic du Jour</div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-header bg-light">
+                                <h5 class="card-title">Pronostic du Jour</h5>
+                            </div>
                             <div class="card-body">
-                                <p class="card-text">Détails du pronostic du jour...</p>
-                                <p><strong>Buteur :</strong> Kylian Mbappé</p>
-                                <p><strong>Match :</strong> PSG vs Marseille</p>
-                                <p><strong>Lieu :</strong> Parc des Princes</p>
-                                <p><strong>Heure :</strong> 20:45</p>
+                                <p class="card-text">Analyse et prédiction pour le match d'aujourd'hui.</p>
+                                <p><i class="fas fa-futbol"></i> <strong>Match :</strong> PSG vs Marseille</p>
+                                <p><i class="fas fa-user"></i> <strong>Buteur Probable :</strong> Kylian Mbappé</p>
+                                <p><i class="fas fa-map-marker-alt"></i> <strong>Lieu :</strong> Parc des Princes</p>
+                                 <p><i class="far fa-clock"></i> <strong>Heure :</strong> 20:45</p>
+                                <a href="#" class="btn btn-primary btn-sm stretched-link" aria-label="Voir le pronostic complet du jour">Voir plus</a>
+                            </div>
+                            <div class="card-footer bg-light text-center">
+                                Publié le <span id="date-jour"></span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <div class="card-header">Pronostic de la Semaine</div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-header bg-light">
+                                <h5 class="card-title">Le Prono de la Semaine</h5>
+                            </div>
                             <div class="card-body">
-                                <p class="card-text">Détails du pronostic de la semaine...</p>
-                                <p><strong>Buteur :</strong> Karim Benzema</p>
-                                <p><strong>Match :</strong> Real Madrid vs Barcelone</p>
-                                <p><strong>Lieu :</strong> Santiago Bernabéu</p>
-                                <p><strong>Heure :</strong> 21:00</p>
+                                <p class="card-text">Notre sélection pour un pari potentiellement gagnant cette semaine.</p>
+                                <p><i class="fas fa-futbol"></i> <strong>Match :</strong> Real Madrid vs Barcelone</p>
+                                <p><i class="fas fa-user"></i> <strong>Buteur Clé :</strong> Karim Benzema</p>
+                                <p><i class="fas fa-map-marker-alt"></i> <strong>Lieu :</strong> Santiago Bernabéu</p>
+                                <p><i class="far fa-calendar-alt"></i> <strong>Date :</strong> Samedi 18 Mai</p>
+                                <p><i class="far fa-clock"></i> <strong>Heure :</strong> 21:00</p>
+                                <a href="#" class="btn btn-primary btn-sm stretched-link" aria-label="Voir le pronostic de la semaine">Voir plus</a>
+                            </div>
+                            <div class="card-footer bg-light text-center">
+                                Valable jusqu'au <span id="date-semaine"></span>
                             </div>
                         </div>
                     </div>
@@ -104,73 +121,67 @@
             </div>
         </section>
 
-        <!-- Offres VIP centrées -->
-        <section class="vip-offers py-5">
+        <section class="vip-offers py-5 bg-light">
             <div class="container">
-                <h2 class="text-center mb-4">Nos Offres VIP</h2>
+                <h2 class="text-center mb-4">Accédez à Nos Pronostics VIP Exclusifs</h2>
+                <p class="text-center lead mb-4">Des analyses approfondies et des sélections pointues pour optimiser vos paris.</p>
                 <div class="row justify-content-center">
-                    <!-- Carte pour l'abonnement de 1 mois -->
-                    <div class="col-md-3">
-                        <div class="card mb-4">
-                            <div class="card-header">1 Mois</div>
-                            <div class="card-body">
-                                <h5 class="card-title text-center">19.99€</h5>
-                                <p class="card-text text-center">
-                                  Accès complet à tous les pronostics VIP pour 1 mois.
-                                </p>
-                                <ul>
-                                  <li>Sans engagement</li>
-                                  <li>Accès au VIP FOOT</li>
-                                  <li>Conseil et suivi</li>
-                                  <li>Contenu exclusif</li>
-                                </ul>
+                    <div class="col-md-3 mb-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-header bg-gold text-white">
+                                <h3>1 Mois</h3>
                             </div>
-                            <div class="card-footer">
-                              <button class="btn btn-gold btn-block">S'abonner</button>
+                            <div class="card-body">
+                                
+                                <p class="card-text">Accès complet à tous les pronostics VIP pendant 1 mois.</p>
+                                <ul class="list-unstyled mt-3">
+                                    <li><i class="fa fa-check text-success"></i> Sans engagement</li>
+                                    <li><i class="fa fa-check text-success"></i> Accès au VIP FOOT</li>
+                                    <li><i class="fa fa-check text-success"></i> Conseil et suivi</li>
+                                    <li><i class="fa fa-check text-success"></i> Contenu exclusif</li>
+                                </ul>
+                                 <h4 class="card-title">19.99€</h4>
+                                <a href="vip.html" class="btn btn-gold btn-block mt-3" aria-label="S'abonner à l'offre VIP 1 mois">S'abonner</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Carte pour l'abonnement de 3 mois -->
-                    <div class="col-md-3">
-                        <div class="card mb-4">
-                            <div class="card-header">3 Mois</div>
-                            <div class="card-body">
-                                <h5 class="card-title text-center">49.99€</h5>
-                                <p class="card-text text-center">
-                                  Accès complet à tous les pronostics VIP pour 3 mois.
-                                </p>
-                                <ul>
-                                  <li>Sans engagement</li>
-                                  <li>Accès au VIP FOOT</li>
-                                  <li>Conseil et suivi</li>
-                                  <li>Contenu exclusif</li>
-                                </ul>
+                    <div class="col-md-3 mb-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-header bg-gold text-white">
+                                <h3>3 Mois</h3>
                             </div>
-                            <div class="card-footer">
-                              <button class="btn btn-gold btn-block">S'abonner</button>
+                            <div class="card-body">
+                                
+                                <p class="card-text">Profitez de 3 mois d'accès VIP à un tarif avantageux.</p>
+                                <ul class="list-unstyled mt-3">
+                                     <li><i class="fa fa-check text-success"></i> Sans engagement</li>
+                                    <li><i class="fa fa-check text-success"></i> Accès au VIP FOOT</li>
+                                    <li><i class="fa fa-check text-success"></i> Conseil et suivi</li>
+                                    <li><i class="fa fa-check text-success"></i> Contenu exclusif</li>
+                                </ul>
+                                <h4 class="card-title">49.99€ </h4>
+                                <a href="vip.html" class="btn btn-gold btn-block mt-3" aria-label="S'abonner à l'offre VIP 3 mois">S'abonner</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Carte pour l'abonnement de 6 mois -->
-                    <div class="col-md-3">
-                        <div class="card mb-4">
-                            <div class="card-header">6 Mois</div>
-                            <div class="card-body">
-                                <h5 class="card-title text-center">89.99€</h5>
-                                <p class="card-text text-center">
-                                  Accès complet à tous les pronostics VIP pour 6 mois.
-                                </p>
-                                <ul>
-                                  <li>Sans engagement</li>
-                                  <li>Accès au VIP FOOT</li>
-                                  <li>Conseil et suivi</li>
-                                  <li>Contenu exclusif</li>
-                                </ul>
+                    <div class="col-md-3 mb-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-header bg-gold text-white">
+                                <h3>6 Mois</h3>
                             </div>
-                            <div class="card-footer">
-                              <button class="btn btn-gold btn-block">S'abonner</button>
+                            <div class="card-body">
+                                
+                                <p class="card-text">Bénéficiez de 6 mois d'expertise VIP à un prix imbattable.</p>
+                                <ul class="list-unstyled mt-3">
+                                     <li><i class="fa fa-check text-success"></i> Sans engagement</li>
+                                    <li><i class="fa fa-check text-success"></i> Accès au VIP FOOT</li>
+                                    <li><i class="fa fa-check text-success"></i> Conseil et suivi</li>
+                                    <li><i class="fa fa-check text-success"></i> Contenu exclusif</li>
+                                </ul>
+                                <h4 class="card-title">19.99€</h4>
+                                <a href="vip.html" class="btn btn-gold btn-block mt-3" aria-label="S'abonner à l'offre VIP 6 mois">S'abonner</a>
                             </div>
                         </div>
                     </div>
@@ -178,29 +189,108 @@
             </div>
         </section>
 
-        <section class="testimonials py-5 bg-light">
-          <div class="container">
-            <h2 class="text-center mb-4">Témoignages</h2>
-            <!-- Ajoutez des témoignages ici -->
-          </div>
+        <section class="testimonials py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Ce que Nos Membres Disent</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-6 mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <p class="card-text"><i class="fas fa-quote-left text-gold pe-2"></i> Grâce à NiniProno, mes paris sont devenus beaucoup plus rentables. L'analyse des matchs est vraiment pointue ! <i class="fas fa-quote-right text-gold ps-2"></i></p>
+                                <p class="blockquote-footer">
+                                    Jean-Pierre, parieur passionné
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <p class="card-text"><i class="fas fa-quote-left text-gold pe-2"></i> L'abonnement VIP vaut vraiment le coup. Les pronostics exclusifs m'ont permis de réaliser de beaux gains. Je recommande vivement ! <i class="fas fa-quote-right text-gold ps-2"></i></p>
+                                <p class="blockquote-footer">
+                                    Sophie, membre VIP
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                 <p class="card-text"><i class="fas fa-quote-left text-gold pe-2"></i> Un site sérieux avec des pronostiqueurs compétents. Le support client est également très réactif. Continuez comme ça ! <i class="fas fa-quote-right text-gold ps-2"></i></p>
+                                <p class="blockquote-footer">
+                                    Karim, utilisateur régulier
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="faq py-5 bg-royal-blue text-white">
-          <div class="container">
-            <h2 class="text-center mb-4">FAQ</h2>
-            <!-- Ajoutez des questions fréquentes ici -->
-          </div>
-        </section>
+      
     </main>
 
-    <footer class="bg-royal-blue text-white text-center py-3">
-      <div class="container">
-        <p>&copy; 2023 NiniProno. Tous droits réservés.</p>
-      </div>
-    </footer>
+   <footer class="bg-royal-blue text-white py-3">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Colonne gauche -->
+            <div class="col-md-6 text-md-start text-center mb-2 mb-md-0">
+                <a href="faq.html" class="text-white me-3">FAQ</a>
+                <a href="mentions.html" class="text-white me-3">ML</a>
+                <a href="contact.html" class="text-white">Contact</a>
+            </div>
 
-    <!-- Bootstrap JS -->
+            <!-- Colonne droite -->
+            <div class="col-md-6 text-md-end text-center">
+                <a href="https://www.tiktok.com/@NiniProno" class="text-white me-3" target="_blank" aria-label="TikTok">
+                    <i class="fab fa-tiktok fa-lg"></i>
+                </a>
+                <a href="https://www.instagram.com/niniprono" class="text-white" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram fa-lg"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Bas de page -->
+        <div class="row">
+            <div class="col-12 text-center mt-2">
+                <p class="mb-0">&copy; 2025 NiniProno. Tous droits réservés.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Get today's date
+        let today = new Date();
+        let day = today.getDate();
+        let month = today.getMonth() + 1; // Months are zero-based
+        let year = today.getFullYear();
+
+        // Ensure leading zeros for day and month
+        day = (day < 10) ? '0' + day : day;
+        month = (month < 10) ? '0' + month : month;
+
+        // Combine the date components
+        let formattedDate = day + '/' + month + '/' + year;
+
+        // Update the HTML element
+        document.getElementById("date-jour").textContent = formattedDate;
+
+        // Calculate the date for next week
+        let nextWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 7);
+        let nextWeekDay = nextWeek.getDate();
+        let nextWeekMonth = nextWeek.getMonth() + 1;
+        let nextWeekYear = nextWeek.getFullYear();
+
+        // Ensure leading zeros for day and month
+        nextWeekDay = (nextWeekDay < 10) ? '0' + nextWeekDay : nextWeekDay;
+        nextWeekMonth = (nextWeekMonth < 10) ? '0' + nextWeekMonth : nextWeekMonth;
+
+        let formattedNextWeekDate = nextWeekDay + '/' + nextWeekMonth + '/' + nextWeekYear;
+        document.getElementById("date-semaine").textContent = formattedNextWeekDate;
+    </script>
 </body>
 </html>
-
