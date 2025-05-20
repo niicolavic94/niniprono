@@ -89,3 +89,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit();
 }
 ?>
+<?php
+// Démarrer la session
+session_start();
+
+// Vérifier si le formulaire a été soumis
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Récupérer les données du formulaire
+    $pseudo = $_POST['pseudo'];
+    $email = $_POST['email'];
+    $age = $_POST['age'];
+    $motdepasse = $_POST['motdepasse'];
+    $confirm_motdepasse = $_POST['confirm_motdepasse'];
+
+    // Valider les données (exemple simple)
+    if ($motdepasse !== $confirm_motdepasse) {
+        die("Les mots de passe ne correspondent pas.");
+    }
+
+    // Ici, vous devriez insérer les données dans votre base de données
+    // Exemple : $stmt = $pdo->prepare("INSERT INTO utilisateurs (pseudo, email, age, motdepasse) VALUES (?, ?, ?, ?)");
+    // $stmt->execute([$pseudo, $email, $age, password_hash($motdepasse, PASSWORD_DEFAULT)]);
+
+    // Stocker un message de confirmation dans la session
+    $_SESSION['message'] = "Inscription réussie ! Vous pouvez maintenant vous connecter.";
+
+    // Rediriger vers la page de connexion
+    header("Location: connexion.php");
+    exit();
+}
+?>
